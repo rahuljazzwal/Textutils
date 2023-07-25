@@ -46,7 +46,7 @@ function App() {
   
   return (
     <>
-    <Navbar title='mytitle' about='myabout' enableMode={enableMode}/>
+    <Navbar title='Textutils' about='myabout' enableMode={enableMode}/>
     <Alert alert={alert} alertmsg = {alertmsg}/>
     <div className="container">
       <Textform setAlert = {setAlert} mode={mode}/>
