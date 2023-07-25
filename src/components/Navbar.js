@@ -46,13 +46,13 @@ export default function Navbar(props) {
               </li> */}
             </ul>
             <div className="d-flex">
-              <div className="bg-primary rounded mx-2" onClick={()=>{props.enableMode('primary')}} style={{width:'30px', height: '30px'}}></div>
-              <div className="bg-success rounded mx-2" onClick={()=>{props.enableMode('success')}} style={{width:'30px', height: '30px'}}></div>
-              <div className="bg-danger rounded mx-2" onClick={()=>{props.enableMode('danger')}} style={{width:'30px', height: '30px'}}></div>
-              <div className="bg-warning rounded mx-2" onClick={()=>{props.enableMode('warning')}} style={{width:'30px', height: '30px'}}></div>
-              <div className="bg-info rounded mx-2" onClick={()=>{props.enableMode('info')}} style={{width:'30px', height: '30px'}}></div>
-              <div className="bg-dark rounded mx-2" onClick={()=>{props.enableMode('dark')}} style={{width:'30px', height: '30px'}}></div>
-              <div className="bg-light rounded mx-2" onClick={()=>{props.enableMode('light')}} style={{width:'30px', height: '30px'}}></div>
+              <div className="bg-primary rounded mx-2" onClick={()=>{props.enableMode('primary')}} style={{width:'30px', height: '30px', cursor:'pointer'}}></div>
+              <div className="bg-success rounded mx-2" onClick={()=>{props.enableMode('success')}} style={{width:'30px', height: '30px', cursor:'pointer'}}></div>
+              <div className="bg-danger rounded mx-2" onClick={()=>{props.enableMode('danger')}} style={{width:'30px', height: '30px', cursor:'pointer'}}></div>
+              <div className="bg-warning rounded mx-2" onClick={()=>{props.enableMode('warning')}} style={{width:'30px', height: '30px', cursor:'pointer'}}></div>
+              <div className="bg-info rounded mx-2" onClick={()=>{props.enableMode('info')}} style={{width:'30px', height: '30px', cursor:'pointer'}}></div>
+              <div className="bg-dark rounded mx-2" onClick={()=>{props.enableMode('dark')}} style={{width:'30px', height: '30px', cursor:'pointer'}}></div>
+              <div className="bg-light rounded mx-2" onClick={()=>{props.enableMode('light')}} style={{width:'30px', height: '30px', cursor:'pointer'}}></div>
             </div>
             {/* <div className={`form-check form-switch text-${props.mode === 'light'? 'blue': 'light'}`}>
                 <input className="form-check-input" type="checkbox" role="switch" onClick={props.enableMode} id="flexSwitchCheckDefault1" />

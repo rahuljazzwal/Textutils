@@ -8,10 +8,11 @@ import React, { useState } from 'react';
 
 
 function App() {
-  // const [mode, setmode] = useState('light');
+  const [mode, setmode] = useState('light');
   const enableMode=(cls)=>{
     setdefault();
     document.body.classList.add('bg-'+cls);
+    setmode(cls);
     setAlert('success', 'Changed to '+cls+' mode');
     setInterval(()=>{
       document.title = 'Enter Text';
@@ -48,7 +49,7 @@ function App() {
     <Navbar title='mytitle' about='myabout' enableMode={enableMode}/>
     <Alert alert={alert} alertmsg = {alertmsg}/>
     <div className="container">
-      <Textform setAlert = {setAlert}/>
+      <Textform setAlert = {setAlert} mode={mode}/>
     {/* <About/> */}
     </div>
     </>

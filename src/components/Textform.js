@@ -28,30 +28,22 @@ function Textform(props) {
     const onChangeClicked=(event)=>{
         setText(event.target.value);
     }
-    const textCount=()=>{
-        let newText=text.split(" ")
-        let len = newText.length;
-        if(newText[len -1] === ''){
-            len= len -1;
-        }
-        return len;
-    }
   return (
     <>
         <div className='container'>
         <h2 style = {props.mode === 'light'? {color:'black'}: {color: 'white'}}>Enter Your text to Analyse</h2>
-        <div className='mb-3' style = {props.mode === 'light'? {color:'black'}: {border: 'solid 2px yellow'}}>
-            <textarea className='form-control' onChange={onChangeClicked} value={text} id='myBox' rows='8' style = {props.mode === 'light'? {color:'blue'}: {color: 'red'}}></textarea>
+        <div className='mb-3' style = {{border: 'solid 4px yellow', color: 'grey'}}>
+            <textarea className='form-control' onChange={onChangeClicked}  id='myBox' rows='8' style = {{backgroundColor: '#70A6B0'}}></textarea>
         </div>
-        <button className="btn btn-primary mx-2" onClick={textToUpperCase}>Convert to Upercase</button>
-        <button className="btn btn-primary mx-2" onClick={textToLowercase}>Convert to Lowercase</button>
-        <button className="btn btn-primary mx-2" onClick={clearText}>Clear All</button>
-        <button className="btn btn-primary mx-2" onClick={removeExtraSpaces}>Remove Extra Spaces</button>
-        <button className="btn btn-primary mx-2" onClick={copyText}>Copy To Clipboard</button>
+        <button className="btn btn-primary mx-2" style={props.mode === 'primary'?{border: 'solid 5px black'}:{border: ''}} onClick={textToUpperCase}>Convert to Upercase</button>
+        <button className="btn btn-primary mx-2" style={props.mode === 'primary'?{border: 'solid 5px black'}:{border: ''}} onClick={textToLowercase}>Convert to Lowercase</button>
+        <button className="btn btn-primary mx-2" style={props.mode === 'primary'?{border: 'solid 5px black'}:{border: ''}} onClick={clearText}>Clear All</button>
+        <button className="btn btn-primary mx-2" style={props.mode === 'primary'?{border: 'solid 5px black'}:{border: ''}} onClick={removeExtraSpaces}>Remove Extra Spaces</button>
+        <button className="btn btn-primary mx-2" style={props.mode === 'primary'?{border: 'solid 5px black'}:{border: ''}} onClick={copyText}>Copy To Clipboard</button>
         </div>
         <div className="container my-3" style = {props.mode === 'light'? {color:'black'}: {color: 'white'}}>
             <h2>Your Text Summary</h2>
-            <p>{textCount} word and {text.length} characters</p>
+            <p>{text.length>0?text.trim().split(" ").length:0} word and {text.length} characters</p>
             <p>{0.5 * text.split(" ").length} seconds to read the Paragraph</p>
             <h3>Preview</h3>
             <p>{text}</p>
